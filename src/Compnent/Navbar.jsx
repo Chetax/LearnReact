@@ -8,25 +8,24 @@ const Navbar=()=>{
 const textStyle={
     color:'aqua',
     fontweight:'bold',
+    cursor:"pointer"
 };
 const button=document.getElementsByClassName('collapseicon');
 const [isClicked,setcliked]=useState(true);
+
+
+
+
 const iconclick=()=>{
    setcliked(!isClicked);
 }
 
+
     return <>  
     <div className="Navbar">
-    <div className="logo"> 
-    J
-    <span style={textStyle}>S</span>
-    X 
-    </div>
-    <div className="collapseicon" onClick={iconclick} style={ {
-    color: isClicked ? 'black' : 'aqua' ,
-     }}>
-    <FontAwesomeIcon icon={faBars} />
-    </div>
+    <div className="logo" style={{cursor:"pointer"}}> J <span style={textStyle}>S</span> X  </div>
+  
+    <div className="collapseicon" onClick={iconclick} style={ { color: isClicked ? 'black' : 'aqua' , }}>  <FontAwesomeIcon icon={faBars} /> </div>
     <div className="list">
     <ul className="Listunorder">
         <li>Home</li>
